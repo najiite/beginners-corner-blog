@@ -11,7 +11,9 @@
     .lg-navElements {
       @apply py-2 px-4 font-semibold text-black hover:bg-purple-800 hover:text-yellow-300 
     }
-  
+  p {
+    @apply py-3
+  }
     .sm-navElements {
       @apply p-5 text-4xl text-white font-semibold hover:bg-purple-800
     }

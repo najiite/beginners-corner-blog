@@ -5,7 +5,7 @@ const footer = () => {
   return (
     
     <div>
-        <div className='bg-color sm:flex sm:gap-10 sm:justify-between mt-10 sm:px-24 px-5 py-10 text-white'>
+        <div className='bg-color sm:flex sm:gap-10 sm:justify-between mt-24 sm:px-24 px-5 py-10  text-white'>
             <div>
                 <p className='font-bold text-3xl font-logo pb-5'>RetroBlog</p>
                 <p className='text-xl'>Category</p>
