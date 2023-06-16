@@ -1,18 +1,18 @@
 import React from 'react'
 import Post from './post'
 
-const posts = () => {
+const posts = ({posts}) => {
   return (
     <div>
-        <h1 className='lg:mx-24 mx-5 text-4xl line-through underline-color decoration-4'>Latest</h1>
+        <h1 className='heading'>Latest Posts</h1>
 
-        <div className='lg:mx-20 mt-24 mb-12 grid gap-2 lg:grid-cols-2'>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+        <div className='lg:mx-20 mt-10 mb-12 grid gap-2 lg:grid-cols-2'>
+            
+          {
+              posts.map((post)=> (
+            <Post key={post._id} post={post}  />
+            ))
+          }
 
         </div>
         <div className='flex justify-center'>

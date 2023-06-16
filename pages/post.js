@@ -1,7 +1,7 @@
 import Blog from '@/components/Blog'
 import Layout from '@/components/Layout'
 
-const post = () => {
+export default function Home() {
   return (
     <>
       <Layout>
@@ -10,4 +10,3 @@ const post = () => {
     </>
   )
 }
-export default post

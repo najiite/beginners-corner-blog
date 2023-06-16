@@ -1,11 +1,10 @@
-import Hero from '@/components/hero'
 import Posts from '@/components/posts'
 import Layout from '@/components/Layout'
 
 import {client} from '@/backend/SanityClient';
 
 export async function getStaticProps() {
-  const query = `*[_type == "post"] | order(_createdAt desc)[1..4]{
+  const query = `*[_type == "post"] | order(_createdAt desc)[0..3]{
     _id,
     _createdAt,
     title,
@@ -37,13 +36,14 @@ export async function getStaticProps() {
  };
 }
 
-export default function Home({posts}) {
+const index = ({posts}) => {
   return (
     <>
       <Layout>
-        <Hero />
-        <Posts posts={posts}  />
+        <Posts posts={posts} />
       </Layout >
     </>
   )
 }
+
+export default index

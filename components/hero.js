@@ -1,29 +1,17 @@
-import {useContext} from 'react'
-import { motion } from 'framer-motion';
+import Link from 'next/link'
 
 const Hero = () => {
-  const textVariant = {
-    hidden: {
-      y: "5vw",
-      opacity: 0,
-    },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.25,
-      },
-    }
-  }
-
+  const Background = '/nbh.jpg'
 
   return (
     <>
             <div className="neu-shadow lg:h-[500px] h-fit lg:mx-24 m-2 mt-24 mb-12 grid grid-rows-2 lg:grid-cols-2">
-                <div className="lg:bg-auto rounded-b-sm bg-cover lg:h-[495px] bg-no-repeat bg-center bg-[url('/nbh.jpg')]"></div>
+                <div style={{ backgroundImage: `url(${Background})`}} className="lg:bg-auto rounded-b-sm bg-cover lg:h-[495px] bg-no-repeat bg-center "></div>
                 <div className='lg:border-l-4 lg:h-[500px] lg:border-black'>
                     <div>
-                      <h1 className='text-4xl lg:pt-10 p-5'>Adobe shares plunge on deal to acquire design platform Figma for $20 billion</h1>
+                      <Link  href={`/posts/post`} >
+                        <h1 className='text-4xl lg:pt-10 p-5'>Adobe shares plunge on deal to acquire design platform Figma for $20 billion</h1>
+                      </Link>
                       <div className='p-5'>
                         Adobe announced Thursday that it will acquire design software firm Figma in a deal worth about $20 billion in cash and stock. Shares of Adobe sank 17%, their biggest plunge since 2010.
 

@@ -47,7 +47,7 @@ const Navbar = () => {
                     
                     <ul className="hidden lg:flex ml-10">
                         <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
-                            <Link href='/#posts'><motion.span>Posts</motion.span></Link>
+                            <Link href='/posts/'><motion.span>Posts</motion.span></Link>
                         </motion.li>
                         <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
                             <Link href='/#about'>About</Link>
