@@ -48,7 +48,7 @@ export async function getStaticProps({params}) {
     categories[]->{title, _id},
   }`
   const blog  = await client.fetch(query)
-  const querySimilar = `*[_type == "post"][title match "${blog.title}" ][0]{
+  const querySimilar = `*[_type == "post"] | order(_createdAt desc)[0]{
     _id,
     _createdAt,
     title,
