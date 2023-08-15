@@ -50,8 +50,8 @@ const footer = () => {
                         </div>
                     </form>
                     <div>
-                        About the blog, retro blog is a daily lifestyle blog, we cover everything from fashion, technology, health, art e.t.c
-                    </div>
+                    Welcome to Beginners Corner, your go-to destination for conquering new challenges with confidence. Whether you're stepping into the world of hobbies, cooking, fitness, or beyond, we're here to guide you through every first step. Our mission is to provide beginners like you with practical advice, inspiring stories, and a supportive community. Join us as we embark on exciting journeys together!
+                     </div>
             </div>
         </div>
         
