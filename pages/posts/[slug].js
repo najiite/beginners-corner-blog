@@ -116,7 +116,7 @@ const post = ({blog,similar, Recent}) => {
         <div className='lg:mx-20 mx-3'>
           <Blog  post={blog} />
 
-          <h3 className='mt-8 text-lg'>New</h3>
+          <h3>New</h3>
           <Blog  post={similar} />
           
           <h1 className='heading-sm'>Recent Posts</h1>

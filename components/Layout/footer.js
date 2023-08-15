@@ -1,14 +1,15 @@
+import Link from 'next/link'
 import React from 'react'
 import {FaFacebookF, FaInstagram, FaTwitter, FaEnvelope, FaArrowRight} from 'react-icons/fa'
 
 const footer = () => {
   return (
     
-    <div>
-        <div className='bg-color sm:flex sm:gap-10 sm:justify-between mt-24 sm:px-24 px-5 py-10  text-white'>
+    <div className='bg-color'>
+        <div className='sm:flex sm:gap-10 sm:justify-between mt-24 sm:px-24 px-5 py-10  text-white'>
             <div>
-                <p className='font-bold text-3xl font-logo pb-5'>RetroBlog</p>
-                <p className='text-xl'>Category</p>
+                <p className='font-bold text-3xl font-logo pb-5 alt-text-color'>Beginners Corner</p>
+                <p className='text-xl'>Categories</p>
                 <ul className='text-base sm:flex sm:justify-between'>
                     <li>Art</li>
                     <li>Tech</li>
@@ -34,9 +35,6 @@ const footer = () => {
                     </div>
 
                 </div>
-                <div className=''>
-                    All rights reserved 2023 RetroBlog
-                </div>
 
             </div>
             <div className='sm:w-1/3'>
@@ -53,6 +51,14 @@ const footer = () => {
                     Welcome to Beginners Corner, your go-to destination for conquering new challenges with confidence. Whether you're stepping into the world of hobbies, cooking, fitness, or beyond, we're here to guide you through every first step. Our mission is to provide beginners like you with practical advice, inspiring stories, and a supportive community. Join us as we embark on exciting journeys together!
                      </div>
             </div>
+        </div>
+        <div className='flex gap-2 justify-center text-center border-t border-violet-100/20 text-violet-200 py-4'>
+                <div className=''>
+                    All rights reserved 2023 Beginners Corner
+                </div>
+                    <Link href='/' >Terms and Conditions</Link>
+                    <Link href='/' >Privacy Policy</Link>
+
         </div>
         
     </div>

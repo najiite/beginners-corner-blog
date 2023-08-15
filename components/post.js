@@ -10,15 +10,15 @@ const post = ({post}) => {
                 <div className='lg:border-l-2  lg:border-black'>
                     <div>
                       <Link href={`/posts/[slug]`} as={`/posts/${post.slug.current}`}>
-                        <h1 className='text-lg font-semibold lg:pt-5 p-5'>{post.title}</h1>
+                        <div className='text-lg font-semibold lg:pt-5 p-5'>{post.title}</div>
                       </Link>
                       <div className='p-5'>{toPlainText(post.body).substring(0, 150)}...</div>
 
                     </div>
 
                     <div className='flex justify-between p-5 text-sm'>
-                      <h1 className='underline  underline-color decoration-4'><span>Article by {post.author.name}</span></h1>
-                      <h1>{toTimestring(post._createdAt)}</h1>
+                      <span className='underline  underline-color decoration-4'><span>Article by {post.author.name}</span></span>
+                      <span>{toTimestring(post._createdAt)}</span>
 
                     </div>
 

@@ -1,4 +1,4 @@
-import Hero from '@/components/Home/hero'
+import FeaturedPost from '@/components/Home/FeaturedPost'
 import Posts from '@/components/posts'
 import Layout from '@/components/Layout/Layout'
 
@@ -85,9 +85,12 @@ export default function Home({posts}) {
   return (
     <>
       <Layout>
-        <Hero />
-        <h1 className='heading'>Latest Posts</h1>
-        <Posts loadMore={loadMore} posts={posts} poststotal={poststotal} />
+        <FeaturedPost />
+        <div className='lg:px-16 px-5'>
+          <h1>Latest Posts</h1>
+          <Posts loadMore={loadMore} posts={posts} poststotal={poststotal} />
+
+        </div>
       </Layout >
     </>
   )
