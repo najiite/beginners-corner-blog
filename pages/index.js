@@ -1,4 +1,4 @@
-import Hero from '@/components/hero'
+import Hero from '@/components/Home/hero'
 import Posts from '@/components/posts'
 import Layout from '@/components/Layout/Layout'
 
