@@ -42,18 +42,18 @@ const Navbar = () => {
         <div className="fixed bg-white top-0 left-0 w-full z-10 ease-in duration-300 ">
             <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 ">
                     <Link className=" mr-5" href='/'>
-                        <h1  className="font-bold lg:text-4xl bg-color border-4 border-black text-white p-2 text-3xl">Retroblog</h1>
+                        <h1  className="font-bold lg:text-4xl bg-color border-4 border-black text-white p-2 text-3xl">Beginners Corner</h1>
                     </Link>
                     
                     <ul className="hidden lg:flex ml-10">
                         <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
-                            <Link href='/posts/'><motion.span>Posts</motion.span></Link>
+                            <Link href='/posts'><motion.span>Posts</motion.span></Link>
                         </motion.li>
                         <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
-                            <Link href='/#about'>About</Link>
+                            <Link href='#about'>About</Link>
                         </motion.li>
                         <motion.li className="lg-navElements"  whileHover={{scale: 1.2}}>
-                            <Link href='/#contact'>Contact</Link>
+                            <Link href='#contact'>Contact</Link>
                         </motion.li>
                     </ul>
                     <form className="hidden lg:block">
@@ -78,13 +78,13 @@ const Navbar = () => {
             >
                     <ul>
                         <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>
-                            <Link href='/#posts'>Posts</Link>
+                            <Link href='/posts'>Posts</Link>
                         </motion.li>
                         <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>
-                            <Link href='/#about'>About</Link>
+                            <Link href='#about'>About</Link>
                         </motion.li>
                         <motion.li onClick={HandleNav}  className="sm-navElements" variants={listVariant}>
-                            <Link href='/#contact'>Contact</Link>
+                            <Link href='#contact'>Contact</Link>
                         </motion.li>
                     </ul>
                 </motion.div>

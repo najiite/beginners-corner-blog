@@ -3,45 +3,66 @@
 @tailwind utilities;
 
 @layer base {
-    html {
+  html {
         scroll-behavior: smooth;
         font-family: 'Oswald', sans-serif;
         @apply text-black;
       }
-    .lg-navElements {
-      @apply py-2 px-4 font-semibold text-black hover:bg-purple-800 hover:text-yellow-300 
-    }
+
   p {
     @apply py-1
   }
-    .sm-navElements {
-      @apply p-5 text-4xl text-white font-semibold hover:bg-purple-800
+
+  .bg-color {
+    @apply bg-teal-600
+  }
+
+  .text-color {
+    @apply text-teal-800
+  }
+
+  .underline-color {
+    @apply decoration-teal-800
+  }
+
+  .border-color {
+    @apply border-teal-700
+  }
+
+  .lg-navElements {
+      @apply py-2 px-4 font-semibold text-black hover:bg-color hover:text-yellow-300 
+    }
+
+  .sm-navElements {
+      @apply p-5 text-4xl text-white font-semibold hover:bg-color
     }
 
     .neu-shadow {
       box-shadow: 15px 15px black;
-      @apply border-[3px] border-black rounded
+      @apply border-[3px] border-black 
     }
 
     .neu-shadow-sm {
       box-shadow: 5px 5px black;
-      @apply border-2 border-black rounded-lg
+      @apply border-2 border-black rounded
     }
 
-    .bg-color {
-      @apply bg-purple-900
-    }
-
-    .underline-color {
-      @apply decoration-purple-800
-    }
 
     .btn {
-      @apply hover:bg-color hover:text-white hover:border-purple-900 bg-white text-black px-10 py-1 rounded-sm border-4 border-black
+      @apply hover:bg-color hover:text-white hover:border-color bg-white text-black px-10 py-1 rounded-sm border-4 border-black
     }
 
     .heading {
-      @apply lg:mx-24 mx-5 mt-24 text-4xl underline decoration-purple-800 decoration-4
+      @apply lg:mx-24 mx-5 mt-24 text-4xl underline underline-color decoration-4
     }
-  
+    .heading-sm {
+      @apply mt-5 text-2xl underline underline-color decoration-4
+    }
+    .text-purple-bg {
+      @apply text-color text-lg font-semibold
+    }
+
+    .text-purple-sm {
+      @apply text-color
+    }
 }

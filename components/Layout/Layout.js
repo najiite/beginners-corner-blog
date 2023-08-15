@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import Navbar from '@/components/Layout/navbar'
+import Footer from '@/components/Layout/footer'
 
 const Layout = ({children, title }) => {
   return (
@@ -24,7 +24,7 @@ const Layout = ({children, title }) => {
   )
 }
 Layout.defaultProps ={
-  title: "Retro Blog"
+  title: "Beginners Corner"
 }
 
 export default Layout

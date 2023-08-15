@@ -1,10 +1,10 @@
 import React from 'react'
 import Post from './post'
+import Pagination from './Pagination'
 
-const posts = ({posts}) => {
+const posts = ({posts, loadMore, poststotal}) => {
   return (
     <div>
-        <h1 className='heading'>Latest Posts</h1>
 
         <div className='lg:mx-20 mt-10 mb-12 grid gap-2 lg:grid-cols-2'>
             
@@ -15,11 +15,7 @@ const posts = ({posts}) => {
           }
 
         </div>
-        <div className='flex justify-center'>
-          <button className='btn'>
-            Load more
-          </button>
-        </div>
+        <Pagination  loadMore={loadMore} posts={posts} poststotal={poststotal} />
     </div>
   )
 }

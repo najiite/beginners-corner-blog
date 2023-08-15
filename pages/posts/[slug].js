@@ -1,7 +1,8 @@
 
-import Layout from '@/components/Layout'
-import Blog from '@/components/Blog'
+import Layout from '@/components/Layout/Layout'
+import Blog from '@/components/Blog/Blog'
 import {client} from '@/backend/SanityClient'
+import PostLists from '@/components/Blog/PostLists'
 
 export async function getStaticPaths() {
   const query = `*[_type == "post"]{
@@ -47,8 +48,33 @@ export async function getStaticProps({params}) {
     },
     categories[]->{title, _id},
   }`
-  const blog  = await client.fetch(query)
-  const querySimilar = `*[_type == "post"] | order(_createdAt desc)[0]{
+  const RecentpostsQuery = `*[_type == "post" && slug.current != "${params.slug}"] | order(_createdAt desc)[1..5]
+  {
+    _id,
+    _createdAt,
+    title,
+    slug,
+    mainImage{
+      asset->{
+        _ref,
+        url
+      },
+    },
+    author->{
+      name,
+      image{
+        asset->{
+          _ref,
+          url
+          }, 
+        },
+      slug,
+    },
+    categories[]->{title, _id},
+  }`
+
+  const querySimilar = `*[_type == "post" && slug.current != "${params.slug}"] | order(_createdAt desc)[0]
+  {
     _id,
     _createdAt,
     title,
@@ -72,22 +98,34 @@ export async function getStaticProps({params}) {
     },
     categories[]->{title, _id},
   }`
+  const blog  = await client.fetch(query)
   const similar = await client.fetch(querySimilar)
+  const RecentPosts = await client.fetch(RecentpostsQuery)
   return {
     props: {
       blog: blog,
       similar: similar,
+      Recent: RecentPosts
     },
  };
 }
-const post = ({blog,similar}) => {
-  /*console.log(similar)*/
+const post = ({blog,similar, Recent}) => {
   return (
     <>
       <Layout title={blog.title}>
-        <Blog  post={blog} />
-        <h3 className='lg:mx-20 mx-3 mt-12'>See Also</h3>
-        <Blog  post={similar} />
+        <div className='lg:mx-20 mx-3'>
+          <Blog  post={blog} />
+
+          <h3 className='mt-8 text-lg'>New</h3>
+          <Blog  post={similar} />
+          
+          <h1 className='heading-sm'>Recent Posts</h1>
+          <PostLists posts={Recent} />
+
+          <h1 className='heading-sm'>Featured Posts</h1>
+          <PostLists posts={Recent} />
+
+        </div>
       </Layout >
     </>
   )
