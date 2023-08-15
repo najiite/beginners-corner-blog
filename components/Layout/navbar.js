@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="fixed bg-white top-0 left-0 w-full z-10 ease-in duration-300 ">
             <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 ">
                     <Link className=" mr-5" href='/'>
-                        <div  className="font-bold lg:text-4xl bg-color border-4 border-black text-white p-2 text-3xl">Beginners Corner</div>
+                        <div  className="font-bold lg:text-4xl bg-color border-4 border-black text-white hover:alt-text-color p-2 text-3xl">Beginners Corner</div>
                     </Link>
                     
                     <ul className="hidden lg:flex ml-10">

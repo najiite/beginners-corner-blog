@@ -21,7 +21,7 @@ const Hero = () => {
                     </div>
 
                     <div className='flex lg:pt-[150px] justify-between p-5'>
-                      <span className='underline  underline-color decoration-4'><span className='p-4'>Article by Okeh Onajite</span></span>
+                      <span>Article by Okeh Onajite</span>
                       <span>05/02/2023</span>
 
                     </div>

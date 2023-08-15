@@ -84,7 +84,7 @@ const index = ({posts}) => {
   return (
     <>
       <Layout>
-        <div className='lg:px-16 px-5'>
+        <div className='lg:px-16 px-3'>
           <h1 className='heading'>Latest Posts</h1>
           <Posts loadMore={loadMore} posts={posts} poststotal={poststotal} />
 

@@ -86,7 +86,7 @@ export default function Home({posts}) {
     <>
       <Layout>
         <FeaturedPost />
-        <div className='lg:px-16 px-5'>
+        <div className='lg:px-16 px-3'>
           <h1>Latest Posts</h1>
           <Posts loadMore={loadMore} posts={posts} poststotal={poststotal} />
 

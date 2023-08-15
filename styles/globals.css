@@ -13,7 +13,7 @@
     @apply py-1
   }
   h1 {
-    @apply mt-24 text-4xl
+    @apply mt-24 text-4xl mx-auto
   }
 
   h2 {
@@ -68,7 +68,11 @@
   }
 
   .btn {
-    @apply hover:bg-color hover:text-white hover:border-color bg-white text-black px-10 py-1 rounded-sm border-4 border-black
+    @apply hover:bg-color hover:text-white bg-black text-white px-10 py-2 rounded-sm
+  }
+
+  .btn-primary {
+    @apply bg-color text-white hover:alt-text-color hover:bg-black px-5 py-1
   }
 
   .text-purple-bg {

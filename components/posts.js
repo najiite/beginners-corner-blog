@@ -6,7 +6,7 @@ const posts = ({posts, loadMore, poststotal}) => {
   return (
     <div>
 
-        <div className='mt-10 mb-12 grid gap-2 lg:grid-cols-2'>
+        <div className='mt-10 mb-12 grid gap-4 lg:grid-cols-2'>
             
           {
               posts.map((post)=> (
