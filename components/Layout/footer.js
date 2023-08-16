@@ -47,17 +47,20 @@ const footer = () => {
                             </span>
                         </div>
                     </form>
-                    <div>
+                    <div className=' text-sm font-extralight'>
                     Welcome to Beginners Corner, your go-to destination for conquering new challenges with confidence. Whether you're stepping into the world of hobbies, cooking, fitness, or beyond, we're here to guide you through every first step. Our mission is to provide beginners like you with practical advice, inspiring stories, and a supportive community. Join us as we embark on exciting journeys together!
                      </div>
             </div>
         </div>
-        <div className='flex gap-2 justify-center text-center border-t border-violet-100/20 text-violet-200 py-4'>
+        <div className='lg:flex grid lg:justify-between justify-center lg:px-10 text-center text-xs border-t border-violet-100/20 text-violet-200 py-4'>
                 <div className=''>
                     All rights reserved 2023 Beginners Corner
                 </div>
+                <div className='flex justify-around gap-2'>
                     <Link href='/' >Terms and Conditions</Link>
                     <Link href='/' >Privacy Policy</Link>
+                    <Link href='/' >Disclaimer</Link>
+                </div>
 
         </div>
         

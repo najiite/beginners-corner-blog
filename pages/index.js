@@ -29,16 +29,41 @@ export async function getStaticProps() {
       slug,
     },
   }`
+  const Featuredquery = `*[_type == "post"] | order(_createdAt desc)[0]{
+    _id,
+    _createdAt,
+    title,
+    slug,
+    mainImage{
+      asset->{
+        _ref,
+        url
+      },
+    },
+    body,
+    author->{
+      name,
+      image{
+        asset->{
+          _ref,
+          url
+          }, 
+        },
+      slug,
+    },
+  }`
   const posts = await client.fetch(query)
+  const Featuredpost = await client.fetch(Featuredquery)
 
   return {
     props: {
       posts,
+      Featuredpost,
     },
  };
 }
 
-export default function Home({posts}) {
+export default function Home({posts, Featuredpost}) {
   const AllPostsquery = `*[_type == "post"]| order(_createdAt desc){
     _id,
     _createdAt,
@@ -85,7 +110,7 @@ export default function Home({posts}) {
   return (
     <>
       <Layout>
-        <FeaturedPost />
+        <FeaturedPost post={Featuredpost} />
         <div className='lg:px-16 px-3'>
           <h1>Latest Posts</h1>
           <Posts loadMore={loadMore} posts={posts} poststotal={poststotal} />
