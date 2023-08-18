@@ -12,7 +12,7 @@ const Blog = ({post}) => {
             </div>
             <div className='flex justify-between'>
               <div className='text-purple-bg'><span>{post.categories[0]?.title}</span> <br></br> <span>Article by {post.author.name}</span></div>
-              <div className='text-purple-sm'>{toTimestring(post._createdAt)}</div>
+              <div className='text-purple-sm' suppressHydrationWarning={true}>{toTimestring(post._createdAt)}</div>
 
             </div>
             <PortableText value={post.body}/>

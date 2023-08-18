@@ -23,7 +23,7 @@ const post = ({post}) => {
 
                     <div className='flex justify-between px-5 text-sm'>
                       <span>Article by {post.author.name}</span>
-                      <span>{toTimestring(post?._createdAt)}</span>
+                      <span suppressHydrationWarning={true}>{toTimestring(post?._createdAt)}</span>
 
                     </div>
 
