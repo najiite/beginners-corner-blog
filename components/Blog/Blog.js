@@ -6,7 +6,7 @@ const Blog = ({post}) => {
   return (
     <>
         <div className=' mt-24 lg:mt-40'>
-            <img className='float-left w-full h-full object-center object-cover mr-5 mb-5 lg:mr-10 neu-shadow ' alt='post' src={post.mainImage.asset.url}></img>
+            <img className='float-left w-full h-full object-center object-cover mr-5 mb-5 lg:mr-10 neu-shadow ' alt={post.categories[0]?.title} src={post.mainImage.asset.url}></img>
             <div className='text-3xl font-semibold pb-5'>
                 {post.title}
             </div>
