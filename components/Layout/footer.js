@@ -9,6 +9,7 @@ const footer = () => {
         <div className='sm:flex sm:gap-10 sm:justify-between mt-24 sm:px-24 px-5 py-10  text-white'>
             <div>
                 <p className='font-bold text-3xl font-logo pb-5 alt-text-color'>Beginners Corner</p>
+                {/**
                 <p className='text-xl'>Categories</p>
                 <ul className='text-base sm:flex sm:justify-between'>
                     <li>Art</li>
@@ -17,6 +18,7 @@ const footer = () => {
                     <li>Lifestyle</li>
                     <li>DIY</li>
                 </ul> 
+                */}
                 <p className='pt-5 pb-3'>Follow Us</p>
                 <div className='text-center flex justify-start sm:justify-evenly pb-5'>
                    

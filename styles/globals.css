@@ -62,6 +62,10 @@
     @apply border-[3px] border-black 
   }
 
+  .neu{
+    @apply border-[3px] border-black 
+  }
+
   .neu-shadow-sm {
     box-shadow: 5px 5px black;
     @apply border-2 border-black rounded
