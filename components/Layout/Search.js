@@ -30,7 +30,7 @@ const Search = () => {
         <>
             <div>
                     <div>
-                        <button onClick={()=> setSearchmodal(!searchmodal)} >
+                        <button title="Search" onClick={()=> setSearchmodal(!searchmodal)} >
                             <BsSearch size={25} />
                         </button>
 
