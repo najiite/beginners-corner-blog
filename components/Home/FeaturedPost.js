@@ -34,7 +34,7 @@ const Hero = ({post}) => {
                     <div className='absolute bottom-0 mt-5 p-5'>
                       <div className='grid  gap-4 grid-cols-2 justify-between'>
                         <div className='flex justify-start'><span className='m-1'><FaPen size={15} /></span> <span>{post.author.name}</span></div>
-                        <span>{toTimestring(post._createdAt)}</span>
+                        <span>{toTimestring(post?._createdAt)}</span>
 
                       </div>
 
