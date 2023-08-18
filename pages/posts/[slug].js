@@ -116,8 +116,10 @@ const post = ({blog,similar, Recent}) => {
         <div className='lg:mx-20 mx-3'>
           <Blog  post={blog} />
 
+          { similar ===null ? (<></>):(<>
           <h3>New</h3>
           <Blog  post={similar} />
+          </>)}
           
           <h1 className='heading-sm'>Recent Posts</h1>
           <PostLists posts={Recent} />
