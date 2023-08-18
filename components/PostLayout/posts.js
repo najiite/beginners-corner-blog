@@ -1,6 +1,6 @@
 import React from 'react'
 import Post from './post'
-import Pagination from './Blog/Pagination'
+import Pagination from '@/components/Blog/Pagination'
 
 const posts = ({posts, loadMore, poststotal}) => {
   return (

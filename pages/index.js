@@ -1,5 +1,5 @@
 import FeaturedPost from '@/components/Home/FeaturedPost'
-import Posts from '@/components/posts'
+import Posts from '@/components/PostLayout/posts'
 import Layout from '@/components/Layout/Layout'
 
 import {client} from '@/backend/SanityClient';
@@ -29,7 +29,7 @@ export async function getStaticProps() {
       slug,
     },
   }`
-  const Featuredquery = `*[_type == "post"] | order(_createdAt desc)[0]{
+  const Featuredquery = `*[_type == "post" && isFeatured == true] | order(_createdAt desc)[0]{
     _id,
     _createdAt,
     title,

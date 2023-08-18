@@ -22,10 +22,6 @@ const footer = () => {
                 <p className='pt-5 pb-3'>Follow Us</p>
                 <div className='text-center flex justify-start sm:justify-evenly pb-5'>
                    
-                    
-                    <div className='border rounded-full border-orange-100 p-2 mr-2'>
-                        <FaEnvelope size={20}/>
-                    </div>
                     <div className='border rounded-full border-orange-100 p-2 mr-2'>
                         <FaFacebookF size={20}/>
                     </div>

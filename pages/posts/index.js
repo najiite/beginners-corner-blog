@@ -1,4 +1,4 @@
-import Posts from '@/components/posts'
+import Posts from '@/components/PostLayout/posts'
 import Layout from '@/components/Layout/Layout'
 import { useState, useEffect } from "react";
 
