@@ -17,12 +17,14 @@ const Hero = ({post}) => {
                   </div>
                   
                 </div>
-                <div className='relative lg:border-l-4 lg:h-[500px] lg:border-black'>
+                <div className='relative lg:border-l-4 lg:h-[500px] h-fit lg:border-black'>
                     <div>
                       <Link  href={`/posts/[slug]`} as={`/posts/${post?.slug.current}`}>
                         <div className='text-4xl lg:pt-10 p-5'>{post.title}</div>
                       </Link>
-                      <div className='p-5'>{toPlainText(post.body).substring(0, 850)}...
+                      <div className='p-5 lg:block hidden'>{toPlainText(post.body).substring(0, 850)}...
+                      </div>
+                      <div className='p-5 lg:hidden block'>{toPlainText(post.body).substring(0, 150)}...
                       </div>
                     </div>
                     <div className='p-5 mb-10'>

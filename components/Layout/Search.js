@@ -12,7 +12,7 @@ const Search = () => {
     const [searchresults, setSearchresults] = useState(null)
     useEffect(() => {
         client.fetch(
-            `*[_type == "post"][body[].children[].text match "${searchterm}" || title match "${searchterm}"]{
+            `*[_type == "post"][body[].children[].text match "${searchterm}*" || title match "${searchterm}"]{
             _id,
             title,
             slug,
