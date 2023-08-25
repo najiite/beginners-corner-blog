@@ -60,7 +60,6 @@ export async function getStaticProps() {
       posts,
       Featuredpost,
     },
-    revalidate: 10, // Seconds
  };
 }
 

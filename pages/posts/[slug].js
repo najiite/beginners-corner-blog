@@ -110,7 +110,6 @@ export async function getStaticProps({params}) {
       /**similar: similar || null, */
       Recent: RecentPosts
     },
-    revalidate: 10, // Seconds
  };
 }
 const post = ({blog, Recent}) => {
