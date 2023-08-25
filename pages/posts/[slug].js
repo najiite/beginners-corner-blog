@@ -130,8 +130,10 @@ const post = ({blog, Recent}) => {
           <h1 className='heading-sm'>Recent Posts</h1>
           <PostLists posts={Recent} />
 
+          {/*
           <h1 className='heading-sm'>Featured Posts</h1>
           <PostLists posts={Recent} />
+          */}
 
         </div>
       </Layout >
