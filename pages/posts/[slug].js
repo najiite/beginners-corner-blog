@@ -73,7 +73,8 @@ export async function getStaticProps({params}) {
     categories[]->{title, _id},
   }`
 
-  const querySimilar = `*[_type == "post" && slug.current != "${params.slug}"] | order(_createdAt desc)[0]
+  /**
+   * const querySimilar = `*[_type == "post" && slug.current != "${params.slug}"] | order(_createdAt desc)[0]
   {
     _id,
     _createdAt,
@@ -98,29 +99,33 @@ export async function getStaticProps({params}) {
     },
     categories[]->{title, _id},
   }`
-  const blog  = await client.fetch(query)
   const similar = await client.fetch(querySimilar)
+  */
+
+  const blog  = await client.fetch(query)
   const RecentPosts = await client.fetch(RecentpostsQuery)
   return {
     props: {
       blog: blog,
-      similar: similar || null,
+      /**similar: similar || null, */
       Recent: RecentPosts
     },
     revalidate: 10, // Seconds
  };
 }
-const post = ({blog,similar, Recent}) => {
+const post = ({blog, Recent}) => {
   return (
     <>
       <Layout title={blog.title}>
         <div className='lg:mx-20 mx-3'>
           <Blog  post={blog} />
 
+          {/*
           { similar === null ? (<></>):(<>
           <h3>New</h3>
           <Blog  post={similar} />
           </>)}
+          */}
           
           <h1 className='heading-sm'>Recent Posts</h1>
           <PostLists posts={Recent} />
