@@ -28,6 +28,10 @@
     @apply mt-5 text-xl
 
   }
+  
+  ul {
+    @apply list-disc list-inside
+  }
 
   .bg-color {
     @apply bg-violet-900
