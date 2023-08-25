@@ -28,8 +28,9 @@
     @apply mt-5 text-xl
 
   }
-  a {
-    @apply text-color
+  
+  p > a{
+    @apply text-color text-xl
   }
 
   ul {
