@@ -48,7 +48,7 @@ export async function getStaticProps({params}) {
     },
     categories[]->{title, _id},
   }`
-  const RecentpostsQuery = `*[_type == "post" && slug.current != "${params.slug}"] | order(_createdAt desc)[1..5]
+  const RecentpostsQuery = `*[_type == "post" && slug.current != "${params.slug}"] | order(_createdAt desc)[0..4]
   {
     _id,
     _createdAt,
