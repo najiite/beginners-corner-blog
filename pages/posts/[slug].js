@@ -107,7 +107,6 @@ export async function getStaticProps({params}) {
       similar: similar,
       Recent: RecentPosts
     },
-    revalidate: 10, // Seconds
  };
 }
 const post = ({blog,similar, Recent}) => {
@@ -117,7 +116,7 @@ const post = ({blog,similar, Recent}) => {
         <div className='lg:mx-20 mx-3'>
           <Blog  post={blog} />
 
-          { similar ===null ? (<></>):(<>
+          { similar === null ? (<></>):(<>
           <h3>New</h3>
           <Blog  post={similar} />
           </>)}
