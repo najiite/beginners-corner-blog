@@ -116,17 +116,16 @@ const post = ({blog, similar, Recent}) => {
       <Layout title={blog.title}>
         <div className='lg:mx-20 mx-3'>
           <Blog  post={blog} />
-
-          
-          { similar === null ? (<></>):(<>
-          <Blog  post={similar} />
-          </>)}
-          
           
           <h1 className='heading-sm'>Recent Posts</h1>
           <PostLists posts={Recent} />
 
           {/*
+          
+          { similar === null ? (<></>):(<>
+          <Blog  post={similar} />
+          </>)}
+
           <h1 className='heading-sm'>Featured Posts</h1>
           <PostLists posts={Recent} />
           */}

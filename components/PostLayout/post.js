@@ -11,7 +11,7 @@ const post = ({post}) => {
                 <div className='lg:border-l-2  lg:border-black'>
                     <div>
                       
-                        <div className='text-lg font-semibold lg:pt-5 p-5'>{post.title}</div>
+                        <div className='text-lg font-semibold lg:pt-5 px-5 pb-2'>{post.title}</div>
                       
                       <div className='px-5'>{toPlainText(post.body).substring(0, 150)}...</div>
 
@@ -21,7 +21,7 @@ const post = ({post}) => {
                       <span className='btn-primary' href={`/posts/[slug]`} as={`/posts/${post.slug.current}`}>Read more</span>
                     </div>
 
-                    <div className='flex justify-between px-5 text-sm'>
+                    <div className='flex justify-between px-5 text-sm mb-5'>
                       <span>Article by {post.author.name}</span>
                       <span suppressHydrationWarning={true}>{toTimestring(post._createdAt)}</span>
 

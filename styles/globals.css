@@ -6,11 +6,11 @@
   html {
     scroll-behavior: smooth;
     font-family: 'Oswald', sans-serif;
-    @apply text-black;
+    @apply text-black tracking-wide
   }
 
   p {
-    @apply py-1
+    @apply py-1 font-thin
   }
   h1 {
     @apply mt-24 text-4xl mx-auto
