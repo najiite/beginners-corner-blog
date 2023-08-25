@@ -6,7 +6,7 @@ const PostLists = ({posts}) => {
     <div> 
          {
               posts.map((post)=> (
-            <Link className='flex my-5 text-xl hover:text-color' key={post._id} href={`/posts/[slug]`} as={`/posts/${post.slug.current}`}>{post.title} </Link>
+            <Link className='flex my-5 text-xl text-color' key={post._id} href={`/posts/[slug]`} as={`/posts/${post.slug.current}`}>{post.title} </Link>
             ))
           }
 
