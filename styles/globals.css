@@ -57,11 +57,11 @@
   }
 
   .lg-navElements {
-      @apply py-2 px-4 font-semibold text-black hover:bg-color hover:alt-text-color
+      @apply py-2 px-4 font-semibold text-black hover:bg-color hover:alt-text-color list-none
     }
 
   .sm-navElements {
-      @apply p-5 text-4xl text-white font-semibold hover:bg-color
+      @apply p-5 text-4xl text-white font-semibold hover:bg-color list-none
     }
 
   .neu-shadow {

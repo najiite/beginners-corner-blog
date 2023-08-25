@@ -2,7 +2,10 @@
 import {PortableText} from '@portabletext/react'
 import { toTimestring } from '@/lib/functions'
 import Sharepost from '@/components/Blog/Sharepost'
+import ImageComponent from './ImageComponent'
+
 const Blog = ({post}) => {
+  
   return (
     <>
         <div className=' mt-24 lg:mt-40'>
@@ -15,7 +18,14 @@ const Blog = ({post}) => {
               <div className='text-purple-sm' suppressHydrationWarning={true}>{toTimestring(post._createdAt)}</div>
 
             </div>
-            <PortableText value={post.body}/>
+            <PortableText 
+                value={post.body} 
+                components={{
+                    // ...
+                    types: {
+                      image: ImageComponent,
+                    },
+                  }}/>
             <Sharepost slug={post.slug.current} />
 
         </div>

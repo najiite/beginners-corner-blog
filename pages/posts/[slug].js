@@ -119,7 +119,6 @@ const post = ({blog, similar, Recent}) => {
 
           
           { similar === null ? (<></>):(<>
-          <h3>New</h3>
           <Blog  post={similar} />
           </>)}
           
