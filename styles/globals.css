@@ -28,9 +28,12 @@
     @apply mt-5 text-xl
 
   }
-  
+  a {
+    @apply text-color
+  }
+
   ul {
-    @apply list-disc list-inside
+    @apply list-decimal list-inside ml-5
   }
 
   .bg-color {
