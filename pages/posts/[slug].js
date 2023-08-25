@@ -19,7 +19,7 @@ export async function getStaticPaths() {
   ))
   return {
     paths,
-    fallback: 'blocking'
+    fallback: false
   }
 }
 export async function getStaticProps({params}) {
@@ -110,6 +110,7 @@ export async function getStaticProps({params}) {
       /**similar: similar || null, */
       Recent: RecentPosts
     },
+    revalidate: 10, // Seconds
  };
 }
 const post = ({blog, Recent}) => {
